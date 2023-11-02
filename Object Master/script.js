@@ -69,3 +69,4 @@ for(const pkmn of pkmns ){
 console.log('the number of pokémon that are "normal" type is: '+ count);
 
 
+
