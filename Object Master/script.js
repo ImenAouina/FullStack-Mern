@@ -33,7 +33,8 @@ console.log(pkmnIds);
 const pkmnIdsDivisibleBy3 = pokémon.filter(p => p.id % 3 === 0);
 console.log(pkmnIdsDivisibleBy3);
 //an array of pokémon objects that are "fire" type
-const pkmnTypeFire = pokémon.filter(p => p.types.includes("fire"));
+//const pkmnTypeFire = pokémon.filter(p => p.types.includes("fire"));
+const pkmnTypeFire = pokémon.filter(p => p.types=="fire");
 console.log(pkmnTypeFire);
 //an array of pokémon objects that have more than one type
 const pkmnTypes = pokémon.filter(p => p.types.length >=2);
@@ -42,11 +43,12 @@ console.log(pkmnTypes);
 const pkmnNames = pokémon.map (p => p.name);
 console.log(pkmnNames);
 //an array with just the names of pokémon with an id greater than 99
-const pkmnName = pokémon.filter(p => p.id > 99).map(pk => pk.name);
+const pkmnName = pokémon.filter(p => p.id > 99).map(p => p.name);
 console.log(pkmnName);
 //an array with just the names of the pokémon whose only type is poison
 
-const pkmnName2 = pokémon.filter(p => p.types.length == 1 && p.types == "poison" ).map(pk => pk.name);
+const pkmnName2 = pokémon.filter(p => p.types == "poison" ).map(pk => pk.name);
+//const pkmnName2 = pokémon.filter(p => p.types.length == 1 && p.types == "poison" ).map(pk => pk.name);
 //const pkmnName2 = pokémon.filter(p => p.types.length == 1 && p.types.includes("poison") ).map(pk => pk.name);
 console.log(pkmnName2);
 
@@ -56,15 +58,14 @@ console.log(pkmnFirstType);
 
 //a count of the number of pokémon that are "normal" type
 const pkmns = pokémon.filter(p => p.types == "normal");
-let count = 0;
 
 console.log('the number of pokémon that are "normal" type is: '+pkmns.length); 
 
 /*other solution*/
+let count = 0;
 for(const pkmn of pkmns ){
     count++;
 }
 console.log('the number of pokémon that are "normal" type is: '+ count);
-
 
 
