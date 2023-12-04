@@ -2,8 +2,13 @@ import React,{useState} from 'react'
 
 
 const Tabs = () => {
-    
-    const [content, setContent]=useState("")
+
+    const tabs= [
+      {label:"tab1", content:"Tab1 content is showing here"},
+      {label:"tab2", content:"Tab2 content is showing here"},
+      {label:"tab3", content:"Tab3 content is showing here"}
+    ];
+    const [tab, setTab]=useState(tabs);
     
   return (
     <div>
